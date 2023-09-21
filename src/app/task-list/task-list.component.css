@@ -1,0 +1,87 @@
+.task-list-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #f0f0f0;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.task-input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.add-task-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.completed {
+  color: #28a745;
+}
+
+.incomplete {
+  color: #dc3545;
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.completed {
+  color: #28a745;
+}
+
+.incomplete {
+  color: #dc3545;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0; 
+}
+.margin{
+  margin-left: 2rem;
+}

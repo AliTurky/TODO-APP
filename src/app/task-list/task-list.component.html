@@ -1,0 +1,44 @@
+<div class="task-list-container">
+  <h2>Tasks</h2>
+  <div class="header">
+    <div class="user-info">
+      <img src="{{userAvatar}}" alt="User Avatar" class="avatar">
+      <span class="username">{{ username }}</span>
+      <button class="update-button margin" (click)="logout()">Logout</button>
+
+
+    </div>
+  </div>
+
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Actions</th>
+        <th>Delete</th> <!-- New column for Delete button -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.task }}</td>
+        <td>
+          <span class="status-icon" [ngClass]="{'completed': task.completed, 'incomplete': !task.completed}">
+            {{ task.completed ? '✔' : '✖' }}
+          </span>
+        </td>
+        <td>
+          <button class="update-button" (click)="updateTask(task.id)">Update</button>
+        </td>
+        <td>
+          <button class="delete-button" (click)="deleteTask(task.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="add-task-container">
+    <input [(ngModel)]="newTask" class="task-input" placeholder="New Task" />
+    <button class="add-task-button" (click)="addTask()">Add Task</button>
+  </div>
+</div>
